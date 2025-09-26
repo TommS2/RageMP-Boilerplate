@@ -1,0 +1,35 @@
+{
+  "name": "ragemp-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:client": "webpack --config webpack.client.config.js",
+    "compile:server": "webpack --config webpack.server.config.js",
+    "compile": "pnpm run compile:client && pnpm run compile:server",
+    "watch:client": "webpack --watch --config webpack.client.config.js",
+    "watch:server": "webpack --watch --config webpack.server.config.js",
+    "watch": "concurrently -n CLIENT,SERVER -c green,cyan \"pnpm run watch:client\" \"pnpm run watch:server\"",
+    "dev": "concurrently -n CLIENT,SERVER,DEV -c green,cyan,magenta \"pnpm run watch:client\" \"pnpm run watch:server\" \"node development.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@ragempcommunity/types-client": "^2.1.9",
+    "@ragempcommunity/types-server": "^2.1.9",
+    "@types/node": "^24.5.2",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
+    "cross-spawn": "^7.0.6",
+    "fs-extra": "^11.3.2",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.2",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3"
+  }
+}

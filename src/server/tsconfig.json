@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "types": [
+            "../../node_modules/@ragempcommunity/types-server",
+            "@types/node"
+        ],
+    },
+    "include": [
+        "**/*.ts"
+    ]
+}
