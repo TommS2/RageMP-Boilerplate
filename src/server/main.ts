@@ -1,1 +1,1 @@
-console.log("server running owouawaw sidawrico");
+console.log("Server-side script working!");
